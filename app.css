@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----Formular----------*/
+#fieldset {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+
+  .nakup{
+    margin-top: 100px;
+}
+
+.destinace {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 500px;
+    /* border: 1px solid black; */
+}
+
+.mesto {
+    height: 50px;
+    width: 150px;
+    flex-direction: row;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.pocet {
+    height: 50px;
+    width: 150px;
+    flex-direction: row;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.vypocty {
+    display: flex;
+    flex-direction: column;
+}
+
+.utrata {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.utrata2, .utrata3, .poznamka, #checkbox, .radio, .shrnuti {
+    padding-left: 20px;
+}
+
+.radio {
+    padding-top: 20px;
+    
+}
+.shrnuti{
+    background-color: beige;
+    padding-top: 20px;
+}
+

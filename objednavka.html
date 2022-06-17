@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="nakup">
+        <form action="" name="form1">
+            <fieldset id="fieldset">
+                <legend>
+                    <h2>Nakup letenek</h2>
+                </legend>
+                <div class="destinace">
+                    <div class="mesto">
+                        <h4>Vyber destinace</h4><br>
+                        <select name="vyberDestinace" onClick="finalniCena()">
+                            <option value="500">Praha 500 Kc</option>
+                            <option value="3000">Frankfurt 3000 Kc</option>
+                            <option value="15000">New York 15000 Kc</option>
+                            <option value="30000">Sydney 30000 Kc</option>
+                            <br />
+                        </select>
+                    </div>
+
+                    <div class="pocet">
+                        <h4>Pocet osob</h4><br>
+                        <select name="pocet" onClick="finalniCena()">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="vypocty">
+                    <div id="checkbox">
+                        <input type="checkbox" name="back1" class="dop-opce" id="back" data-value="Zpateční letenka"
+                            onClick="finalniCena()">
+                        <label for="back">Zpateční letenka?</label><br>
+                    </div>
+                    <div class="radio">
+                        <h4>Výběr třídy</h4>
+                        <input name="trida" type="radio" onClick="finalniCena()">
+                        <label for="economy">Economy class (0 Kč)</label><br>
+                        <input name="trida" type="radio" onClick="finalniCena()"> Business class (+25%)<br>
+                        <input name="trida" type="radio" onClick="finalniCena()"> Royal class (+50%)<br>
+                    </div>
+
+                    <div class="shrnuti">
+                        <h4>Celková částka:</h4>
+                        <br>
+                        <span id="castka">0</span><span> Kč</span>
+                    </div>
+
+                    <div class="utrata">
+                        <div class="utrata1">
+                            <h4>Kolík chcete utratit?</h4><br>
+                            <input type=" text" name="odpoved" value="0">
+                        </div>
+                        <div class="utrata2">
+                            <button type="button" onClick="kontrolaPenez()">Bude mi to stačit?</button>
+                        </div>
+                        <div class="utrata3">
+                            <span id="answer"></span>
+                        </div>
+                    </div>
+
+                    <div class="poznamka">
+                        <h4>Poznamka</h4>
+                        <textarea id="pozn" cols=40 rows=10 placeholder="Napiste sem poznamku"
+                            onkeypress="return kontrolaText(event)"></textarea>
+
+                        <h4> Kontaktni e-mail </h4>
+                        <input type="text" name="text1" id="pole1" size="40" placeholder="jarmila.krupova@vsb.cz"
+                            onkeypress="return kontrolaText(event)">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="objednavka.js"></script>
+</body>
+
+</html>
